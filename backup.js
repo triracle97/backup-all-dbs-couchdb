@@ -44,7 +44,7 @@ async function main() {
 
   const dbs = await readAllDb(sourceUrl);
 
-  console.log("Creating backup");
+  console.log(`Creating backup with server ${serverName}`);
   const filePrefix = `backup-${serverName}`;
   if (!fs.existsSync(filePrefix)) {
     fs.mkdirSync(filePrefix);
