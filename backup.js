@@ -33,6 +33,8 @@ const { CronJob } = require("cron");
 
 const pool = new workerpool.pool(__dirname + "/worker.js", { maxWorkers: 4 });
 
+console.log(`Server name: ${process.env.SERVER_NAME}`);
+
 /*
   Main function, run from base of file.
 */
