@@ -18,7 +18,7 @@
 // The script generates the backup object name by combining together the path
 // part of the database URL and the current time.
 
-require("dotenv").config();
+require("dotenv").config({ path: `.env.${process.env.SERVER_ENV}` });
 const { PassThrough } = require("node:stream");
 
 const { HeadBucketCommand, S3Client } = require("@aws-sdk/client-s3");
